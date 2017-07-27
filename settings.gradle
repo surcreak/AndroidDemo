@@ -1,0 +1,2 @@
+include ':Demo'
+include ':Module:music-picker'

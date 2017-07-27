@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <solid android:color="#999999" />
+        </shape>
+    </item>
+
+    <item android:bottom="0.5dp">
+        <selector>
+            <item android:drawable="@android:color/white" android:state_pressed="false"></item>
+            <item android:drawable="@color/audio_item_bg_color" android:state_pressed="true"></item>
+        </selector>
+    </item>
+</layer-list>
