@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnLi
             case 1:
                 fragment = new TempTestFragment();
                 break;
+            case 2:
+                fragment = new TestHorizontalGridViewFragment();
+                break;
         }
 
         getSupportFragmentManager().beginTransaction()

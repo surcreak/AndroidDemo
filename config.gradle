@@ -1,0 +1,18 @@
+ext {
+    version = [
+            compileSdkVersion   : 25,
+            buildToolsVersion   : "25.0.2",
+            minSdkVersion       : 16,
+            targetSdkVersion    : 25,
+            versionCode         : 1,
+            versionName         : "1.0"
+    ]
+
+    dependencies  = [
+            "appcompat-v7"      : "com.android.support:appcompat-v7:26.+",
+            "recyclerview"      : "com.android.support:recyclerview-v7:26.+",
+            "constraint-layout" : "com.android.support.constraint:constraint-layout:1.0.2",
+            "dexter"            : "com.karumi:dexter:4.1.0",
+            "preference-v7"     : "com.android.support:preference-v7:26.+"
+    ]
+}

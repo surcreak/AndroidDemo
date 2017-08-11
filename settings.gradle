@@ -1,2 +1,3 @@
 include ':Demo'
-include ':Module:music-picker'
+include ':music-picker'
+include ':horizontal-grid-view'
