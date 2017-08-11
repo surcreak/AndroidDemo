@@ -13,6 +13,8 @@ ext {
             "recyclerview"      : "com.android.support:recyclerview-v7:26.+",
             "constraint-layout" : "com.android.support.constraint:constraint-layout:1.0.2",
             "dexter"            : "com.karumi:dexter:4.1.0",
-            "preference-v7"     : "com.android.support:preference-v7:26.+"
+            "preference-v7"     : "com.android.support:preference-v7:26.+",
+            "retrofit"          : "com.squareup.retrofit2:retrofit:2.3.0",
+            "retrofit-gson"     : "com.squareup.retrofit2:converter-gson"
     ]
 }

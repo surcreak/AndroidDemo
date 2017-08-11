@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.example.testretrofit.TestRetrofitFragment;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -59,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnLi
                 break;
             case 2:
                 fragment = new TestHorizontalGridViewFragment();
+                break;
+            case 3:
+                fragment = new TestRetrofitFragment();
                 break;
         }
 
