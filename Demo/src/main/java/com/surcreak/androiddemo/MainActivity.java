@@ -15,11 +15,6 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 import com.surcreak.androiddemo.prefrence.TestPreferenceFragment;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
-
 public class MainActivity extends AppCompatActivity implements MainFragment.OnListItemClickListerner{
 
     TextView tempTest;
@@ -29,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tempTest = (TextView) findViewById(R.id.temp_test);
-        tempTest();
 
         if(savedInstanceState == null) {
             MainFragment fragment = new MainFragment();
@@ -72,11 +66,11 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnLi
                 .commit();
     }
 
-    private void tempTest(){
-        Calendar calendar = Calendar.getInstance();
-        DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.getDefault());
-        SimpleDateFormat  simpleDateFormat = new SimpleDateFormat("DD MM YYYY");
-        tempTest.setText(simpleDateFormat.format(calendar.getTime()));
-    }
+//    private void tempTest(){
+//        Calendar calendar = Calendar.getInstance();
+//        DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.getDefault());
+//        SimpleDateFormat  simpleDateFormat = new SimpleDateFormat("DD MM YYYY");
+//        tempTest.setText(simpleDateFormat.format(calendar.getTime()));
+//    }
 
 }

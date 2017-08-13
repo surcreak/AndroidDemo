@@ -15,6 +15,6 @@ ext {
             "dexter"            : "com.karumi:dexter:4.1.0",
             "preference-v7"     : "com.android.support:preference-v7:26.+",
             "retrofit"          : "com.squareup.retrofit2:retrofit:2.3.0",
-            "retrofit-gson"     : "com.squareup.retrofit2:converter-gson"
+            "retrofit-gson"     : "com.squareup.retrofit2:converter-gson:2.1.0"
     ]
 }

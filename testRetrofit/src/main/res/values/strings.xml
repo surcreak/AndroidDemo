@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">testRetrofit</string>
+    <string name="fail">failed</string>
 </resources>
