@@ -4,7 +4,7 @@ package com.example.testretrofit.bean;
  * Created by gaoliang on 2017/8/11.
  */
 
-public class Translation {
+public class TranslationGet {
     private int status;
     private content content;
 

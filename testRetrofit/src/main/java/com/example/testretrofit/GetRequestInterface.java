@@ -1,6 +1,6 @@
 package com.example.testretrofit;
 
-import com.example.testretrofit.bean.Translation;
+import com.example.testretrofit.bean.TranslationGet;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -12,5 +12,5 @@ import retrofit2.http.GET;
 public interface GetRequestInterface {
 
     @GET("ajax.php?a=fy&f=auto&t=auto&w=hello%20world")
-    Call<Translation> getCall();
+    Call<TranslationGet> getCall();
 }

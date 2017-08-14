@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.testretrofit.bean.Translation;
+import com.example.testretrofit.bean.TranslationGet;
+import com.example.testretrofit.bean.TranslationPost;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,7 +36,8 @@ public class TestRetrofitFragment extends Fragment {
         View root;
         root = inflater.inflate(R.layout.fragment_testretrofit, null);
         setupView(root);
-        request();
+        //getRequest();
+        postRequest();
         return root;
     }
 
@@ -43,7 +45,7 @@ public class TestRetrofitFragment extends Fragment {
         showView = (TextView) v.findViewById(R.id.show);
     }
 
-    public void request() {
+    public void getRequest() {
         // Step1: add dependencies.
         // compile 'com.squareup.retrofit2:retrofit:2.0.2'
 
@@ -59,18 +61,42 @@ public class TestRetrofitFragment extends Fragment {
                 .build();
         // Step5: cterte netional request instence.
         GetRequestInterface request = retrofit.create(GetRequestInterface.class);
-        Call<Translation> call = request.getCall();
+        Call<TranslationGet> call = request.getCall();
 
         // Setp6: send netional request.
-        call.enqueue(new Callback<Translation>() {
+        call.enqueue(new Callback<TranslationGet>() {
             @Override
-            public void onResponse(Call<Translation> call, Response<Translation> response) {
+            public void onResponse(Call<TranslationGet> call, Response<TranslationGet> response) {
                 showView.setText(response.body().toString());
             }
 
             @Override
-            public void onFailure(Call<Translation> call, Throwable t) {
+            public void onFailure(Call<TranslationGet> call, Throwable t) {
                 showView.setText(R.string.fail);
+            }
+        });
+    }
+
+    public void postRequest() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://fanyi.youdao.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        PostRequestInterface request = retrofit.create(PostRequestInterface.class);
+
+        Call<TranslationPost> call = request.getCall("I love you");
+
+        call.enqueue(new Callback<TranslationPost>() {
+            @Override
+            public void onResponse(Call<TranslationPost> call, Response<TranslationPost> response) {
+                showView.setText(response.body().getTranslateResult().get(0).get(0).getTgt());
+            }
+
+            @Override
+            public void onFailure(Call<TranslationPost> call, Throwable t) {
+                showView.setText(R.string.fail);
+                showView.append("\n"+t.getMessage());
             }
         });
     }
