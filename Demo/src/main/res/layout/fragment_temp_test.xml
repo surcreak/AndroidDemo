@@ -21,6 +21,12 @@
         android:layout_height="wrap_content"
         android:text="@string/temp_test"/>
 
+    <Button
+        android:id="@+id/design_sample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/design_sample"/>
+
     <TextView
         android:id="@+id/show"
         android:layout_width="wrap_content"

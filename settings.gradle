@@ -1,3 +1,4 @@
-include ':Demo', ':testRetrofit'
+include ':Demo', ':testRetrofit', ':designsample'
 include ':music-picker'
 include ':horizontal-grid-view'
+include ':designsample'

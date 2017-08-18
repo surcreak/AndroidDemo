@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.designsample.DesignSampleActivity;
 import com.example.musicpicker.MusicPickActivity;
 
 import java.util.ArrayList;
@@ -26,13 +27,14 @@ import java.util.List;
  * Created by gaoliang on 2017/6/19.
  */
 
-public class TempTestFragment extends Fragment {
+public class TestFragment extends Fragment {
 
     private static final int REQUEST_CODE_MUSIC_PICK = 1001;
 
     Button launchMusicPlayerBtn;
     Button externalMedia;
     Button tempTestBtn;
+    Button designSampleBtn;
     TextView showView;
     Context mContext;
     AudioManager mAudioManager;
@@ -78,7 +80,18 @@ public class TempTestFragment extends Fragment {
                 testMusicPick();
             }
         });
+        designSampleBtn = (Button) v.findViewById(R.id.design_sample);
+        designSampleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDesignSample();
+            }
+        });
         showView = (TextView) v.findViewById(R.id.show);
+    }
+
+    private void openDesignSample() {
+        startActivity(new Intent(getActivity(), DesignSampleActivity.class));
     }
 
     private void testMusicPick(){

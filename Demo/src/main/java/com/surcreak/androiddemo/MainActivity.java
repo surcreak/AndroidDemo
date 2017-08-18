@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnLi
                 fragment = new TestPreferenceFragment();
                 break;
             case 1:
-                fragment = new TempTestFragment();
+                fragment = new TestFragment();
                 break;
             case 2:
                 fragment = new TestHorizontalGridViewFragment();
