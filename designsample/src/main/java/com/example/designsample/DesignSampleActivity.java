@@ -9,8 +9,9 @@ import android.view.View;
 
 public class DesignSampleActivity extends AppCompatActivity {
 
-    FloatingActionButton fab;
-    ViewPager viewPager;
+    private FloatingActionButton fab;
+    private ViewPager viewPager;
+    private MyViewPageAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class DesignSampleActivity extends AppCompatActivity {
             }
         });
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-
+        adapter = new MyViewPageAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
     }
 }
