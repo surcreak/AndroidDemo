@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.designsample.DesignSampleActivity;
 import com.example.musicpicker.MusicPickActivity;
+import com.example.viewdemo.ViewDemoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,8 @@ public class TestFragment extends Fragment {
     Button externalMedia;
     Button tempTestBtn;
     Button designSampleBtn;
+    Button viewDemoBtn;
+
     TextView showView;
     Context mContext;
     AudioManager mAudioManager;
@@ -88,6 +91,15 @@ public class TestFragment extends Fragment {
             }
         });
         showView = (TextView) v.findViewById(R.id.show);
+        viewDemoBtn = (Button) v.findViewById(R.id.view_demo);
+        viewDemoBtn.setOnClickListener((l) -> {
+            openViewDemo();
+        });
+    }
+
+    private void openViewDemo() {
+        Intent i = new Intent(getActivity(), ViewDemoActivity.class);
+        startActivity(i);
     }
 
     private void openDesignSample() {

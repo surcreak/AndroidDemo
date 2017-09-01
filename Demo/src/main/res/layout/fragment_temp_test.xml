@@ -27,6 +27,12 @@
         android:layout_height="wrap_content"
         android:text="@string/design_sample"/>
 
+    <Button
+        android:id="@+id/view_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open_view_demo"/>
+
     <TextView
         android:id="@+id/show"
         android:layout_width="wrap_content"
