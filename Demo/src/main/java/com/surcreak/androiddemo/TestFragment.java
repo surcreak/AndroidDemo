@@ -17,8 +17,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.baserecyclerviewadapterhelpertest.TestRecyclerViewAdapterActivity;
 import com.example.designsample.DesignSampleActivity;
 import com.example.musicpicker.MusicPickActivity;
+import com.example.testrxjava.TestRXJavaActivity;
 import com.example.viewdemo.ViewDemoActivity;
 
 import java.util.ArrayList;
@@ -37,6 +39,8 @@ public class TestFragment extends Fragment {
     Button tempTestBtn;
     Button designSampleBtn;
     Button viewDemoBtn;
+    Button testRxjavaBtn;
+    Button recyclerViewAdapterBtn;
 
     TextView showView;
     Context mContext;
@@ -95,6 +99,29 @@ public class TestFragment extends Fragment {
         viewDemoBtn.setOnClickListener((l) -> {
             openViewDemo();
         });
+
+        testRxjavaBtn = (Button)v.findViewById(R.id.rxjava_test);
+        testRxjavaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                testRxjava();
+            }
+        });
+        recyclerViewAdapterBtn = (Button) v.findViewById(R.id.recycler_view_adapter_test);
+        recyclerViewAdapterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                testRecyclerViewAdapter();
+            }
+        });
+    }
+
+    private void testRecyclerViewAdapter() {
+        startActivity(new Intent(getActivity(), TestRecyclerViewAdapterActivity.class));
+    }
+
+    private void testRxjava() {
+        startActivity(new Intent(getActivity(), TestRXJavaActivity.class));
     }
 
     private void openViewDemo() {

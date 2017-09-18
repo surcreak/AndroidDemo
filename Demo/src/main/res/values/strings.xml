@@ -5,4 +5,6 @@
     <string name="temp_test">temp_test</string>
     <string name="design_sample">design sample</string>
     <string name="open_view_demo">open view demo</string>
+    <string name="rxjava_test">rxjava_test</string>
+    <string name="recyclerviewadaptertest">recyclerViewAdapterTest</string>
 </resources>

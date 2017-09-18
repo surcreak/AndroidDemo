@@ -1,4 +1,6 @@
 include ':Demo'
+include ':baserecyclerviewadapterhelpertest'
+include ':testrxjava'
 include ':testRetrofit'
 include ':music-picker'
 include ':horizontal-grid-view'
