@@ -1,18 +1,19 @@
 package com.example.viewdemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 /**
  * Created by gaoliang on 2017/8/29.
  */
 
-public class ViewDemoActivity extends AppCompatActivity {
+public class ViewDemoActivity extends AppCompatActivity implements View.OnClickListener{
 
-    ViewPager viewPager;
-    ViewPageAdapter mViewPageAdapter;
+    private Button lineChartBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,8 +23,13 @@ public class ViewDemoActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        viewPager = (ViewPager) findViewById(R.id.view_page);
-        mViewPageAdapter = new ViewPageAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(mViewPageAdapter);
+        lineChartBtn = (Button) findViewById(R.id.line_chart);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.line_chart) {
+            startActivity(new Intent(ViewDemoActivity.this, LineCharActivity.class));
+        }
     }
 }
