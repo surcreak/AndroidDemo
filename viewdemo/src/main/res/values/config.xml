@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- com.example.viewdemo.view.LineChar default values -->
+    <dimen name="default_pre_util_lenth_x">2dp</dimen>
+    <dimen name="default_pre_util_lenth_y">2dp</dimen>
+    <integer name="default_min_x">0</integer>
+    <integer name="default_min_y">0</integer>
+    <integer name="default_max_x">100</integer>
+    <integer name="default_max_y">100</integer>
+    <integer name="default_gap_x">20</integer>
+    <integer name="default_gap_y">20</integer>
+    <bool name="default_has_grid_line_x">true</bool>
+    <bool name="default_has_grid_line_y">true</bool>
+    <color name="default_line_color">#FF000000</color>
+    <dimen name="default_line_width">2dp</dimen>
+    <dimen name="default_point_width">3dp</dimen>
+    <color name="default_grid_color">#FFDDDDDD</color>
+    <dimen name="default_grid_width">2dp</dimen>
+
+</resources>

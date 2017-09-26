@@ -8,6 +8,9 @@
         <activity android:name=".ViewDemoActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             />
+        <activity android:name=".LineCharActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
 
     </application>
 

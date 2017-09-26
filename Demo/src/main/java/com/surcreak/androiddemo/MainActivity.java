@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_testrecyclerviewadapter);
+        setContentView(R.layout.activity_main);
         tempTest = (TextView) findViewById(R.id.temp_test);
 
         if(savedInstanceState == null) {

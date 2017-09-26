@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LineChar">
+        <attr name="pre_util_lenth_x" format="dimension"></attr>
+        <attr name="pre_util_lenth_y" format="dimension"></attr>
+        <attr name="pre_min_x" format="integer"></attr>
+        <attr name="pre_min_y" format="integer"></attr>
+        <attr name="pre_max_x" format="integer"></attr>
+        <attr name="pre_max_y" format="integer"></attr>
+        <attr name="pre_gap_x" format="integer"></attr>
+        <attr name="pre_gap_y" format="integer"></attr>
+        <attr name="has_grid_line_x" format="boolean"></attr>
+        <attr name="has_grid_line_y" format="boolean"></attr>
+        <attr name="line_color" format="color"></attr>
+        <attr name="line_width" format="dimension"></attr>
+        <attr name="point_width" format="dimension"></attr>
+        <attr name="grid_color" format="color"></attr>
+        <attr name="grid_width" format="dimension"></attr>
+    </declare-styleable>
+</resources>

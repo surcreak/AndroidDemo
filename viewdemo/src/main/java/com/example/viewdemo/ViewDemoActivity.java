@@ -24,6 +24,7 @@ public class ViewDemoActivity extends AppCompatActivity implements View.OnClickL
 
     private void initView() {
         lineChartBtn = (Button) findViewById(R.id.line_chart);
+        lineChartBtn.setOnClickListener(this);
     }
 
     @Override
