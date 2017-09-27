@@ -175,30 +175,33 @@ public class LineChar extends View {
         Path path = new Path();
         path.moveTo(coordinateOrigin.x, coordinateOrigin.y);
         for (int i = 0; i < data.size(); i++) {
-            Point currentPoint = new Point(coordinateOrigin.x + (int)(data.get(i).x * perUnitLenthX),
-                    coordinateOrigin.y - (int)(data.get(i).y * perUnitLenthY));
+            Point currentPoint = caculateRelativeToOrigin(data.get(i));
             canvas.drawPoint(currentPoint.x, currentPoint.y, pointPaint);
             path.lineTo(currentPoint.x, currentPoint.y);
         }
         canvas.drawPath(path, linePaint);
 
         if (hasGridLineX) {
-            for (int i = 0; i < maxX; i++) {
-                path.reset();
-                path.moveTo(i * gapX * perUnitLenthX, 0);
-                path.lineTo(i * gapX * perUnitLenthX, maxY * perUnitLenthY);
-                canvas.drawPath(path, gridPaint);
+            for (int i = gapX; i < maxX; i += gapX) {
+                Point left = caculateRelativeToOrigin(new Point(i, 0));
+                Point right = caculateRelativeToOrigin(new Point(i, maxY));
+                canvas.drawLine(left.x, left.y, right.x, right.y, gridPaint);
             }
         }
 
         if (hasGridLineY) {
-            for (int i = 0; i < maxY; i++) {
-                path.reset();
-                path.moveTo(0, i * gapY * perUnitLenthY);
-                path.lineTo(maxX * perUnitLenthX, i * gapY * perUnitLenthY);
-                canvas.drawPath(path, gridPaint);
+            for (int i = gapY; i < maxY; i += gapY) {
+                Point left = caculateRelativeToOrigin(new Point(0, i));
+                Point right = caculateRelativeToOrigin(new Point(maxY, i));
+                canvas.drawLine(left.x, left.y, right.x, right.y, gridPaint);
             }
         }
 
     }
+
+    private Point caculateRelativeToOrigin(Point point) {
+        return  new Point(coordinateOrigin.x + (int)(point.x * perUnitLenthX),
+                coordinateOrigin.y - (int)(point.y * perUnitLenthY));
+    }
+
 }

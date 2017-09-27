@@ -12,9 +12,9 @@
     <bool name="default_has_grid_line_x">true</bool>
     <bool name="default_has_grid_line_y">true</bool>
     <color name="default_line_color">#FF000000</color>
-    <dimen name="default_line_width">2dp</dimen>
+    <dimen name="default_line_width">1dp</dimen>
     <dimen name="default_point_width">3dp</dimen>
     <color name="default_grid_color">#FFDDDDDD</color>
-    <dimen name="default_grid_width">2dp</dimen>
+    <dimen name="default_grid_width">0.5dp</dimen>
 
 </resources>
